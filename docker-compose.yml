@@ -4,3 +4,4 @@ services:
     image: vladimir226/vlahasher:latest
     ports:
       - 8080:8080
+      
