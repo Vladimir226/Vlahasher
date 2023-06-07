@@ -1,3 +1,12 @@
+version: '3'
+services:
+  app:
+    image: vladimir226/vlahasher:latest
+    ports:
+      - 8080:8080
+
+
+
 name: Docker Build
 
 on:
@@ -25,3 +34,5 @@ jobs:
         context: .
         push: true
         tags: vladimir226/vlahasher:latest
+    - name: Deploy Application
+      run: docker-compose up -d
