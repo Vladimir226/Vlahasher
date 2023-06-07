@@ -11,3 +11,4 @@ WORKDIR /app
 CMD ["python3", "Vlahasher.py"]
 
 
+
