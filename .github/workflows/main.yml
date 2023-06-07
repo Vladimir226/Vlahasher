@@ -34,3 +34,4 @@ jobs:
         tags: vladimir226/vlahasher:latest
     - name: Deploy Application
       run: docker-compose up -d
+      
