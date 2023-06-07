@@ -37,7 +37,7 @@ class MerkleTree:
                 node = MerkleNode(hashed_data)
                 block_hashes.append(node)
 
-        self.time_read_file = time.time()-start
+        self.time_read_file = time.time() - start
         print('read time file: ', self.time_read_file)
 
         if len(block_hashes) % 2 == 1:
@@ -48,12 +48,12 @@ class MerkleTree:
     def build_tree_from_leaves(self, leaves):
         if len(leaves) == 1:
             return leaves[0]
-        self.height = self.height+1
+        self.height = self.height + 1
         parents = []
         for i in range(0, len(leaves), 2):
             left = leaves[i]
             if i + 1 < len(leaves):
-                right = leaves[i+1]
+                right = leaves[i + 1]
                 parents.append(self.hash_pair(left, right))
             else:
                 parents.append(left)
@@ -73,15 +73,11 @@ class MerkleTree:
     def get_root(self):
         return self.root
 
-    
     def root_hash(self):
         return self.root.hash if self.root else None
 
     def get_time_read_file(self):
         return self.time_read_file
-
-
-
 
 file_path = input('name file: ')
 file_path = '/app/' + file_path
