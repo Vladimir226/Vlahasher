@@ -79,6 +79,7 @@ class MerkleTree:
     def get_time_read_file(self):
         return self.time_read_file
 
+
 file_path = input('name file: ')
 file_path = '/app/' + file_path
 print(file_path)
