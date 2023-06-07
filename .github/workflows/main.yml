@@ -11,6 +11,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      
+    - name: Run Flake8
+      run: flake8
 
     - name: Set up Docker
       uses: docker/setup-buildx-action@v1
