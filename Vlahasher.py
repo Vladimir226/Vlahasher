@@ -1,9 +1,9 @@
 import hashlib
 import os
 import time
-# import graphviz as gv
 
-LIMIT_SIZE = 2000000
+
+LIMIT_SIZE = 2100000
 
 
 class MerkleNode:
@@ -36,7 +36,6 @@ class MerkleTree:
                     hashed_data = hashlib.md5(data).digest()
                 node = MerkleNode(hashed_data)
                 block_hashes.append(node)
-                # self.nodes[self.height].append(node)
 
         self.time_read_file = time.time()-start
         print('read time file: ', self.time_read_file)
@@ -56,7 +55,6 @@ class MerkleTree:
             if i + 1 < len(leaves):
                 right = leaves[i+1]
                 parents.append(self.hash_pair(left, right))
-                # self.nodes[self.height].append(self.hash_pair(left, right))
             else:
                 parents.append(left)
         self.nodes.append(parents)
@@ -83,30 +81,6 @@ class MerkleTree:
         return self.time_read_file
 
 
-# def vizual_tree(root):
-#     g = gv.Graph(format='png')
-#     g.attr('node', shape='square')
-#     g.node(root.hash.hex(), root.hash.hex())
-#     build_viz_tree(g, root)
-#     g.render('binary_tree', view=True)
-
-
-# def build_viz_tree(g, node):
-#     print(node.hash.hex())
-
-#     if node.left is None and node.right is None:
-#         return
-
-#     if node.left is not None:
-#         g.node(node.left.hash.hex(), node.left.hash.hex())
-#         g.edge(node.hash.hex(), node.left.hash.hex())
-#         build_viz_tree(g, node.left)
-#     if node.right is not None:
-#         g.node(node.right.hash.hex(), node.right.hash.hex())
-#         g.edge(node.hash.hex(), node.right.hash.hex())
-#         build_viz_tree(g, node.right)
-
-#     return
 
 
 file_path = input('name file: ')
@@ -120,7 +94,3 @@ print('root hash: ', merkle_tree.root_hash().hex())
 print('time:')
 print('read file: ', merkle_tree.get_time_read_file())
 print('algorithm all: ', time_alg)
-# if (os.path.getsize(file_path)):
-#     merkle_tree.vizual_tree(merkle_tree.get_root())
-# else:
-#     print('Max size 2Mb for graph image!')
