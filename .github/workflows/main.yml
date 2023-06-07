@@ -21,4 +21,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: vladimir226/vlahasher226:latest
+        tags: vladimir226/vlahasher:latest
