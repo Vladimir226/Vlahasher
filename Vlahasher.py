@@ -91,3 +91,5 @@ print('root hash: ', merkle_tree.root_hash().hex())
 print('time:')
 print('read file: ', merkle_tree.get_time_read_file())
 print('algorithm all: ', time_alg)
+
+
