@@ -32,3 +32,4 @@ jobs:
         context: .
         push: true
         tags: vladimir226/vlahasher:latest
+        
