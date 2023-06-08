@@ -89,7 +89,7 @@ merkle_tree = MerkleTree(file_path, type_hash, 1024)
 time_alg = time.time() - start
 print('root hash: ', merkle_tree.root_hash().hex())
 print('time:')
-print('read file: ', merkle_tree.get_time_read_file())
+print('reading file: ', merkle_tree.get_time_read_file())
 print('algorithm all: ', time_alg)
 
 
