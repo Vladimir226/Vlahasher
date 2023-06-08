@@ -1,5 +1,5 @@
 services:
   myapp:
-    image: ${{ secrets.DOCKERHUB_USERNAME }}/vlahasher:latest
+    image: vladimir226/vlahasher:latest
     ports:
       - "8000:8000"
