@@ -1,5 +1,0 @@
-services:
-  myapp:
-    image: vladimir226/vlahasher:latest
-    ports:
-      - "8000:8000"
