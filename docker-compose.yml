@@ -1,7 +1,5 @@
 services:
   myapp:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ${{ secrets.DOCKERHUB_USERNAME }}/vlahasher:latest
     ports:
       - "8000:8000"
