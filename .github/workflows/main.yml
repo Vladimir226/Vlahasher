@@ -32,4 +32,6 @@ jobs:
         context: .
         push: true
         tags: vladimir226/vlahasher:latest
+    - name: Deploy to local machine
+      run: docker-compose up
         
