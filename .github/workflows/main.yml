@@ -34,5 +34,6 @@ jobs:
         push: true  # Публикация собранного образа
         tags: vladimir226/vlahasher:latest  # Теги для образа
 
+#вроде как не работает, не смог найстроить
     - name: Deploy to local machine  # Шаг: Развёртывание на локальной машине
       run: docker-compose up -d  # Запуск команды docker-compose для развёртывания контейнеров в фоновом режиме
